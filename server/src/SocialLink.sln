@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocialLink.Domain", "SocialLink.Domain\SocialLink.Domain.csproj", "{9FB8FCE9-7D6B-4846-BE1C-6954AA5DE1B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialLink.Domain.Tests", "SocialLink.Tests\SocialLink.Domain.Tests.csproj", "{B417ACF6-F6C6-4353-8261-53BB144AFB8F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9FB8FCE9-7D6B-4846-BE1C-6954AA5DE1B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FB8FCE9-7D6B-4846-BE1C-6954AA5DE1B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FB8FCE9-7D6B-4846-BE1C-6954AA5DE1B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FB8FCE9-7D6B-4846-BE1C-6954AA5DE1B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B417ACF6-F6C6-4353-8261-53BB144AFB8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B417ACF6-F6C6-4353-8261-53BB144AFB8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B417ACF6-F6C6-4353-8261-53BB144AFB8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B417ACF6-F6C6-4353-8261-53BB144AFB8F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {09AF1973-62AE-4876-840D-E9885FD32489}
+	EndGlobalSection
+EndGlobal

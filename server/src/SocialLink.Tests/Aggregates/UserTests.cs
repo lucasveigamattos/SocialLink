@@ -1,4 +1,5 @@
 ﻿using SocialLink.Domain.Aggregate;
+using SocialLink.Domain.Entities;
 using SocialLink.Domain.ValueObjects;
 using Xunit;
 
@@ -6,7 +7,7 @@ namespace SocialLink.Domain.Tests.Aggregates
 {
     public class UserTests
     {
-        private User _user = new User(new Name("Name"), new Email("email@gmail.com"), new Image("uri"), new Bio(string.Empty), 0, 0);
+        private User _user = new User(new Name("Name"), new Email("email@gmail.com"), new Image("uri"), new Bio(string.Empty), 0, 0, new List<Post>());
 
         [Fact]
         public void CreateValidUser()
@@ -76,6 +77,24 @@ namespace SocialLink.Domain.Tests.Aggregates
             _user.RemoveFromCommentsCount();
 
             Assert.Equal(_user.CommentsCount, actual);
+        }
+
+        [Fact]
+        public void CreatePost()
+        {
+            _user.CreatePost(new Post(_user.Id, "Test Post Creation.", 0, new List<Post>()));
+            var post = _user.Posts[0];
+
+            Assert.True(post.Id != null && post.UserId == _user.Id && post.Content == "Test Post Creation." && post.Likes == 0 && post.Comments.Count == 0);
+        }
+
+        [Fact]
+        public void DeletePost()
+        {
+            _user.CreatePost(new Post(_user.Id, "Test Post Creation.", 0, new List<Post>()));
+            _user.DeletePost(_user.Posts[0].Id);
+
+            Assert.True(_user.Posts.Count == 0);
         }
     }
 }

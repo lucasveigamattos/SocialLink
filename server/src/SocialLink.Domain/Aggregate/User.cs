@@ -11,8 +11,9 @@ namespace SocialLink.Domain.Aggregate
         public Bio Bio { get; private set; }
         public int LikesCount { get; private set; }
         public int CommentsCount { get; private set; }
+        public List<Post> Posts { get; private set; }
 
-        public User(Name name, Email email, Image picture, Bio bio, int likesCount, int commentsCount)
+        public User(Name name, Email email, Image picture, Bio bio, int likesCount, int commentsCount, List<Post> posts)
         {
             Name = name;
             Email = email;
@@ -20,6 +21,7 @@ namespace SocialLink.Domain.Aggregate
             Bio = bio;
             LikesCount = likesCount;
             CommentsCount = commentsCount;
+            Posts = posts;
         }
 
         public void ChangeName(Name name)
@@ -60,6 +62,18 @@ namespace SocialLink.Domain.Aggregate
         public void RemoveFromCommentsCount()
         {
             CommentsCount--;
+        }
+
+        public void CreatePost(Post post)
+        {
+            Posts.Add(post);
+        }
+
+        public void DeletePost(Guid postId)
+        {
+            Post postToBeDeleted = null;
+            foreach (Post post in Posts) if (post.Id == postId) postToBeDeleted = post;
+            if (postToBeDeleted is not null) Posts.Remove(postToBeDeleted);
         }
     }
 }

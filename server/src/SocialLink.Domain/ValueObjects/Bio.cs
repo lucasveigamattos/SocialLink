@@ -14,7 +14,7 @@ namespace SocialLink.Domain.ValueObjects
 
         private void Validate()
         {
-            AssertConcern.AssertGratherThanOrEqualTo(Content.Length, 250, "Bio can't have more than 250 characters.");
+            AssertConcern.AssertGratherThan(Content.Length, 250, "Bio can't have more than 250 characters.");
         }
     }
 }

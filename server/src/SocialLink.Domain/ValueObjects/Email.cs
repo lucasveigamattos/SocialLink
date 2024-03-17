@@ -1,5 +1,4 @@
 ﻿using SocialLink.Domain.Assertion;
-using System.Security.Cryptography.X509Certificates;
 
 namespace SocialLink.Domain.ValueObjects
 {
@@ -19,22 +18,32 @@ namespace SocialLink.Domain.ValueObjects
         {
             void ValidateLocal()
             {
-                string local = Value.Substring(0, Value.IndexOf("@"));
-                AssertConcern.AssetEqual(local.Length, 0, "Email should have local.");
+                var exceptionMessage = "Email should have local.";
+                if (Value.IndexOf("@") == -1) throw new DomainException(exceptionMessage);
+
+                var local = Value.Substring(0, Value.IndexOf("@"));
+                AssertConcern.AssetEqual(local.Length, 0, exceptionMessage);
             }
 
             void ValidateDomain()
             {
-                string domain = Value.Substring(Value.IndexOf("@") + 1, Value.LastIndexOf(".") - Value.IndexOf(".") - 1);
-                AssertConcern.AssetEqual(domain.Length, 0, "Email should have a domain.");
+                var exceptionMessage = "Email should have a domain.";
+                if (Value.IndexOf("@") == -1 || Value.LastIndexOf(".") == -1) throw new DomainException(exceptionMessage);
+
+                var domain = Value.Substring(Value.IndexOf("@") + 1, Value.LastIndexOf(".") - Value.IndexOf("@") - 1);
+                AssertConcern.AssetEqual(domain.Length, 0, exceptionMessage);
             }
 
             void ValidateTLD()
             {
-                string TLD = Value.Substring(Value.IndexOf(".") + 1);
-                AssertConcern.AssetEqual(TLD.Length, 0, "Email should have TLD.");
+                var exceptionMessage = "Email should have TLD.";
+                if (Value.LastIndexOf(".") == -1) throw new DomainException(exceptionMessage);
+
+                string TLD = Value.Substring(Value.LastIndexOf(".") + 1);
+                AssertConcern.AssetEqual(TLD.Length, 0, exceptionMessage);
             }
 
+            AssertConcern.AssetEqual(Value.Length, 0, "Invalid email.");
             ValidateLocal();
             ValidateDomain();
             ValidateTLD();

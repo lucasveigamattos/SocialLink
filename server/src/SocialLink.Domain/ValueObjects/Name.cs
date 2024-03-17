@@ -17,7 +17,7 @@ namespace SocialLink.Domain.ValueObjects
         private void Validate()
         {
             AssertConcern.AssetEqual(Value.Length, 0, "Name can't be black.");
-            AssertConcern.AssertGratherThanOrEqualTo(Value.Length, 50, "Name can't have more than 50 characters.");
+            AssertConcern.AssertGratherThan(Value.Length, 50, "Name can't have more than 50 characters.");
         }
     }
 }

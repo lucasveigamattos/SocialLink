@@ -20,3 +20,14 @@ C:\Users\lucas\OneDrive\Documentos\Developer\projects\SocialLink\src\SocialLink.
 C:\Users\lucas\OneDrive\Documentos\Developer\projects\SocialLink\src\SocialLink.Domain\obj\Debug\net6.0\refint\SocialLink.Domain.dll
 C:\Users\lucas\OneDrive\Documentos\Developer\projects\SocialLink\src\SocialLink.Domain\obj\Debug\net6.0\SocialLink.Domain.pdb
 C:\Users\lucas\OneDrive\Documentos\Developer\projects\SocialLink\src\SocialLink.Domain\obj\Debug\net6.0\ref\SocialLink.Domain.dll
+C:\Users\lucas\OneDrive\Documentos\Developer\projects\SocialLink\server\src\SocialLink.Domain\bin\Debug\net6.0\SocialLink.Domain.deps.json
+C:\Users\lucas\OneDrive\Documentos\Developer\projects\SocialLink\server\src\SocialLink.Domain\bin\Debug\net6.0\SocialLink.Domain.dll
+C:\Users\lucas\OneDrive\Documentos\Developer\projects\SocialLink\server\src\SocialLink.Domain\bin\Debug\net6.0\SocialLink.Domain.pdb
+C:\Users\lucas\OneDrive\Documentos\Developer\projects\SocialLink\server\src\SocialLink.Domain\obj\Debug\net6.0\SocialLink.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lucas\OneDrive\Documentos\Developer\projects\SocialLink\server\src\SocialLink.Domain\obj\Debug\net6.0\SocialLink.Domain.AssemblyInfoInputs.cache
+C:\Users\lucas\OneDrive\Documentos\Developer\projects\SocialLink\server\src\SocialLink.Domain\obj\Debug\net6.0\SocialLink.Domain.AssemblyInfo.cs
+C:\Users\lucas\OneDrive\Documentos\Developer\projects\SocialLink\server\src\SocialLink.Domain\obj\Debug\net6.0\SocialLink.Domain.csproj.CoreCompileInputs.cache
+C:\Users\lucas\OneDrive\Documentos\Developer\projects\SocialLink\server\src\SocialLink.Domain\obj\Debug\net6.0\SocialLink.Domain.dll
+C:\Users\lucas\OneDrive\Documentos\Developer\projects\SocialLink\server\src\SocialLink.Domain\obj\Debug\net6.0\refint\SocialLink.Domain.dll
+C:\Users\lucas\OneDrive\Documentos\Developer\projects\SocialLink\server\src\SocialLink.Domain\obj\Debug\net6.0\SocialLink.Domain.pdb
+C:\Users\lucas\OneDrive\Documentos\Developer\projects\SocialLink\server\src\SocialLink.Domain\obj\Debug\net6.0\ref\SocialLink.Domain.dll

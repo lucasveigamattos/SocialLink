@@ -15,6 +15,14 @@
             Comments = comments;
         }
 
+        public Post(Guid id, Guid userId, string content, int likes, List<Post> comments) : base(id)
+        {
+            UserId = userId;
+            Content = content;
+            Likes = likes;
+            Comments = comments;
+        }
+
         public void ChangeContent(string content)
         {
             Content = content;

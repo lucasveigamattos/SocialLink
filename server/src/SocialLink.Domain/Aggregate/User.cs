@@ -24,6 +24,17 @@ namespace SocialLink.Domain.Aggregate
             Posts = posts;
         }
 
+        public User(Guid id, Name name, Email email, Image picture, Bio bio, int likesCount, int commentsCount, List<Post> posts) : base(id)
+        {
+            Name = name;
+            Email = email;
+            Picture = picture;
+            Bio = bio;
+            LikesCount = likesCount;
+            CommentsCount = commentsCount;
+            Posts = posts;
+        }
+
         public void ChangeName(Name name)
         {
             Name = name;
